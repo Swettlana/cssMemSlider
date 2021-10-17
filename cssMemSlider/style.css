@@ -149,3 +149,48 @@ slide4 {
   font-style: italic;
   color: #fff;
 }
+@media (max-width: 1740px) {
+  body {
+    padding: 2% 5% 2% 5%;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    padding: 10% 3%;
+    height: 70vh;
+  }
+  .slider__wrapper {
+    justify-content: start;
+    row-gap: 5%;
+  }
+  .slider__controls {
+    flex-direction: column;
+    height: 20%;
+    align-items: center;
+    justify-content: start;
+    row-gap: 10%;
+  }
+  .text {
+    order: 2;
+  }
+  .navigation {
+    order: 1;
+  }
+  .slider__image {
+    height: 65%;
+  }
+
+  label {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 33%;
+  }
+  label div {
+    display: flex;
+    width: 0.4rem;
+    height: 0.1rem;
+  }
+  .text span {
+    font-size: 16px;
+  }
+}
