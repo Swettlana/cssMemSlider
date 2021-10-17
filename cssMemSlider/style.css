@@ -133,6 +133,7 @@ slide4 {
 }
 .text {
   display: grid;
+  margin-top: 1rem;
 }
 
 .text1,
