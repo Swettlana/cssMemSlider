@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background: rgb(41, 39, 39);
-  padding: 3% 10% 5% 10%;
+  padding: 2% 15% 2% 15%;
   box-sizing: border-box;
 }
 input {
@@ -17,14 +17,26 @@ input {
 }
 label {
   display: flex;
-  width: 2em;
-  height: 1em;
-  border-radius: 33%;
-  background: #ccc;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 5rem;
   cursor: pointer;
-  transition: all 0.4s;
+  background: transparent;
+  border-radius: 33%;
 }
-label:hover {
+label div {
+  display: flex;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 33%;
+  background-color: #ccc;
+
+  border: 5px solid transparent;
+  transition: all 0.4s;
+  box-sizing: content-box;
+}
+label:hover div {
   transform: scale(1.2);
   background: rgb(66, 63, 63);
 }
@@ -40,7 +52,6 @@ label:hover {
   width: 100%;
   height: 100%;
   justify-content: space-between;
-  background-color: aliceblue;
 }
 .slider__image {
   width: 100%;
@@ -71,7 +82,7 @@ label:hover {
   display: flex;
   justify-content: space-between;
   column-gap: 5%;
-  background: cadetblue;
+  overflow: hidden;
 }
 .slide1,
 .slide2,
@@ -82,12 +93,59 @@ slide4 {
 #slide1:checked ~ .slider__image > .slider__image-all {
   transform: translateX(0);
 }
+#slide1:checked ~ .slider__controls > .navigation label[for="slide1"] div {
+  background: rgb(65, 16, 16);
+}
+#slide1:checked ~ .slider__controls > .text .text1 {
+  opacity: 1;
+  transform: translate(0);
+}
 #slide2:checked ~ .slider__image > .slider__image-all {
   transform: translateX(-25%);
+}
+#slide2:checked ~ .slider__controls > .navigation label[for="slide2"] div {
+  background: rgb(65, 16, 16);
+}
+#slide2:checked ~ .slider__controls > .text .text2 {
+  opacity: 1;
+  transform: translate(0);
 }
 #slide3:checked ~ .slider__image > .slider__image-all {
   transform: translateX(-50%);
 }
+#slide3:checked ~ .slider__controls > .navigation label[for="slide3"] div {
+  background: rgb(65, 16, 16);
+}
+#slide3:checked ~ .slider__controls > .text .text3 {
+  opacity: 1;
+  transform: translate(0);
+}
 #slide4:checked ~ .slider__image > .slider__image-all {
   transform: translateX(-75%);
+}
+#slide4:checked ~ .slider__controls > .navigation label[for="slide4"] div {
+  background: rgb(65, 16, 16);
+}
+#slide4:checked ~ .slider__controls > .text .text4 {
+  opacity: 1;
+  transform: translate(0);
+}
+.text {
+  display: grid;
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+  grid-column: 1;
+  grid-row: 1;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  transform: translate(-200%);
+}
+.text span {
+  font-size: 32px;
+  font-style: italic;
+  color: #fff;
 }
