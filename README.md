@@ -1,1 +1,1 @@
-# cssMemSlider
+https://swettlana.github.io/cssMemSlider/cssMemSlider/index.html
